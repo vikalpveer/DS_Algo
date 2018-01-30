@@ -42,7 +42,7 @@ void find_smallest_window(const std::string s, const std::string p, int &max_len
 
     std::map<char, int> p_map;
 
-    // A hasmap for containing count of chars in pattern
+    // A hashmap for containing count of chars in pattern
     for (int i = 0; i < p_size; i++) {
         p_map[p.at(i)]++;
     }
