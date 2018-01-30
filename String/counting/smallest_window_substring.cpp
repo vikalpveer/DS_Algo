@@ -35,11 +35,14 @@ void find_smallest_window(const std::string s, const std::string p, int &max_len
     int s_size = s.size();
     int p_size = p.size();
 
-    if(s_size == 0 || p_size == 0) {
+    // return is one of the string is empty or given string size is less than pattern size
+    if(s_size == 0 || p_size == 0 || s_size < p_size) {
         return;
     }
+
     std::map<char, int> p_map;
 
+    // A hasmap for containing count of chars in pattern
     for (int i = 0; i < p_size; i++) {
         p_map[p.at(i)]++;
     }
@@ -66,15 +69,20 @@ void find_smallest_window(const std::string s, const std::string p, int &max_len
             }
         }
     }
+
+    // If pattern is not found in the string or reaching end of the original string return
     if(end_index == 0 || start_index == s_size - 1) {
         return;
     }
+
+    // Check if the window found is less than original min window.
+
     if(end_index - start_index + 1 < max_length) {
         max_length = end_index - start_index + 1;
         res = s.substr(start_index, max_length);
-        std::cout <<"String found :"<< res <<" of len :"<< max_length <<"\n";
     }
 
+    // Iterate with the next window from the start index.
     find_smallest_window(s.substr(start_index + 1), p, max_length, res);
     return;
 }
