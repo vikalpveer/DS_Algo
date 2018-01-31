@@ -1,4 +1,4 @@
-#include "Stack/Stack.h"
+#include "Stack.h"
 
 int main() {
 	Stack<int> S(2);

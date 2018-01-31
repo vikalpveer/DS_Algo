@@ -7,7 +7,7 @@
 // NOTE : Matrix is NOT strictly sorted
 
 
-#include "Matrix/matrix.h"
+#include "matrix.h"
 
 void find(int x, const Matrix<int> &m, int nRow, int nCol) {
     for(int i = nCol - 1; i >=0; i--) {

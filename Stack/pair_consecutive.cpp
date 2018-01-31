@@ -4,7 +4,7 @@
 //The function should retain the original stack content.
 
 
-#include "Stack/Stack.h"
+#include "Stack.h"
 
 int main () {
 	std::vector <int> v;

@@ -1,7 +1,7 @@
 // The program should print the matrix in spiral form.
 //https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
 
-#include "Matrix/matrix.h"
+#include "matrix.h"
 
 
 // 1  2  3  4
