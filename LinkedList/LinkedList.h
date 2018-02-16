@@ -18,5 +18,6 @@ class LinkedList {
     public:
         LinkedList();
         void appendEnd(const T &val);
+        void appendStart(const T &val);
         void print() const;
 };

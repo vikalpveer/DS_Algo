@@ -46,6 +46,15 @@ void LinkedList<T>::appendEnd(const T &val) {
 }
 
 template <class T>
+void LinkedList<T>::appendStart(const T&val) {
+    Node <int>* temp = new Node<int>(val);
+    if(HEAD) {
+        temp->setNext(HEAD);
+    }
+    HEAD = temp;
+}
+
+template <class T>
 void LinkedList<T>::print() const {
     const Node<T> *plist = HEAD;
     while(plist) {
@@ -62,6 +71,7 @@ int main() {
     list.appendEnd(2);
     list.appendEnd(3);
     list.appendEnd(4);
+    list.appendStart(5);
     list.print();
 }    
 
